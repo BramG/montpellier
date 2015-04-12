@@ -1,0 +1,10 @@
+montpellier:
+  label: Montpellier one column layout
+  category: Display Suite
+  type: partial
+  theme: montpellier
+  #icon: images/montpellier.png
+  #library: montpellier/layout
+  regions:
+    main:
+      label: Main content
