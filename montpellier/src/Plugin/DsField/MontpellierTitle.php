@@ -19,4 +19,17 @@ use Drupal\ds\Plugin\DsField\DsFieldBase;
  */
 class MontpellierTitle extends DsFieldBase {
 
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    // Fetch the entity
+    $node = $this->entity();
+
+    // Always return a render array!
+    return array(
+        '#markup' => $node->title->value,
+        '#prefix' => 'Montpellier ',
+    );
+  }
 }
