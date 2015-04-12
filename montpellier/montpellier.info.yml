@@ -1,0 +1,7 @@
+type: module
+name: 'Montpellier'
+description: 'Display Suite test module.'
+core: 8.x
+package: 'Display Suite'
+dependencies:
+  - ds
