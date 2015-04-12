@@ -26,13 +26,24 @@ class MontpellierTitle extends DsFieldBase {
   public function build() {
     $config = $this->getConfiguration();
 
+    // Fetch formatter
+    $field = $this->getFieldConfiguration();
+    $formatter = $field['formatter'];
+
+    if ($formatter == 'italic') {
+      $prefix = '<em>' . $config['prefix'] . '</em>';
+    }
+    else {
+      $prefix = $config['prefix'];
+    }
+
     // Fetch the entity
     $node = $this->entity();
 
     // Always return a render array!
     return array(
       '#markup' => $node->title->value,
-      '#prefix' => $config['prefix'] . ' ',
+      '#prefix' => $prefix . ' ',
     );
   }
 
@@ -71,6 +82,16 @@ class MontpellierTitle extends DsFieldBase {
   public function defaultConfiguration() {
     return array(
       'prefix' => 'Montpellier',
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function formatters() {
+    return array(
+      'normal' => 'Normal',
+      'italic' => 'Italic',
     );
   }
 
