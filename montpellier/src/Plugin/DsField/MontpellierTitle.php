@@ -95,4 +95,18 @@ class MontpellierTitle extends DsFieldBase {
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function isAllowed() {
+    if ($this->bundle() != 'article') {
+      return FALSE;
+    }
+    else if ($this->viewMode() == 'teaser') {
+      return FALSE;
+    }
+
+    return TRUE;
+  }
+
 }
