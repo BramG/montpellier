@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\ds\Form\FieldFormBase;
 
 /**
- * Configures token fields.
+ * Configures montpellier fields.
  */
 class MontpellierFieldForm extends FieldFormBase {
 
