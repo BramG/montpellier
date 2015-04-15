@@ -1,0 +1,5 @@
+ds.montpellier_field_add_local_action:
+  route_name: ds.add_montpellier_field
+  title: 'Add a montpellier field'
+  appears_on:
+    - ds.fields_list

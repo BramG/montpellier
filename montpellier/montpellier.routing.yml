@@ -1,0 +1,14 @@
+ds.manage_montpellier_field:
+  path: 'admin/structure/ds/fields/manage_montpellier/{field_key}'
+  defaults:
+    _form: '\Drupal\montpellier\Form\MontpellierFieldForm'
+    _title: 'Edit a montpellier field'
+  requirements:
+    _permission: 'admin fields'
+ds.add_montpellier_field:
+  path: 'admin/structure/ds/fields/manage_montpellier'
+  defaults:
+    _form: '\Drupal\montpellier\Form\MontpellierFieldForm'
+    _title: 'Add a montpellier field'
+  requirements:
+    _permission: 'admin fields'
